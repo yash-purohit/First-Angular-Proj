@@ -1,0 +1,18 @@
+<!-- <p>add-student works!</p> -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+<form action="" [formGroup]="addStudent"  >
+    <label for="validationCustom04" class="form-label">Student Name</label>
+    <input  class="form-control " type="text" name="SName" formControlname="SName" placeholder="Student Name"><br>
+    
+    <label for="validationCustom04" class="form-label">Adhar Number</label>
+    <input [class.is-invalid]="addStudent.get('AdharNo')?.invalid && addStudent.get('AdharNo')?.touched" formControlName="AdharNo" class="form-control"type="text" name="AdharNo"  placeholder="Adhar No."><br>
+    
+    <label for="validationCustom04" class="form-label">Parent Name</label>
+    <input class="form-control "type="text" name="PName" formControlname="PName" placeholder="Parents Name"><br>
+    
+    <label for="validationCustom04" class="form-label">Mobile Number</label>
+    <input [class.is-invalid]="addStudent.get('MobNo')?.invalid && addStudent.get('MobNo')?.touched"formControlName="MobNo" class="form-control"type="number" name="MobNo" placeholder="Mobile Number"><br>
+    
+    <input type="submit" class="btn btn-primary" value="Add">
+</form>
